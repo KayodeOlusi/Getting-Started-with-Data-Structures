@@ -24,8 +24,6 @@ function addUp(input) {
   return answer;
 }
 
-console.log(addUp([1, 2, 3])); //log out [4,4,4]
-
 // Double iteration over an array
 function doubleIterate(input) {
   //Create an empty array
@@ -40,4 +38,6 @@ function doubleIterate(input) {
   return answer;
 }
 
+
+console.log(addUp([1, 2, 3])); //log out [4,4,4]
 console.log(doubleIterate([1, 2, 3])); // log out []
