@@ -63,16 +63,16 @@ const fibonacci = ( num ) => {
 
 // Using Recursion to add numbers in an array
 const addSum = ( array ) => {
-  let sum = 0
+  let sum = 0 // our base caee
   for ( i = 0; i < array.length; i++ ) {
-    const current = array[i];
+    const current = array[i]; // we make the first element in thr array a variable
     if ( Array.isArray(current) ) {
-      sum += addSum(current)
+      sum += addSum(current) // if the element is an array, we call the function to add the elements in the array
     }else {
-      sum += current
+      sum += current // here we add the elements together and keep track of the sum variable defined earlier
     }
   }
-  return sum
+  return sum // we return sum
 }
 
 
