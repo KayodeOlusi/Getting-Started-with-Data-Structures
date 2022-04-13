@@ -61,6 +61,8 @@ const insertionSort = (num) => {
 //    Using Quick Sort
 const quickSort = (nums) => {
 	if (nums.length <= 2) {
+		if (nums[0] > nums[1]) [nums[0], nums[1]] = [nums[1], nums[0]];
+
 		return nums;
 	}
 
@@ -82,7 +84,7 @@ const quickSort = (nums) => {
 	return sortedLeft.concat(pivot, sortedRight);
 };
 
-//    Merge Sort
+// Merge Sort
 const mergeSort = (nums) => {
 	if (nums.length < 2) {
 		return nums;
@@ -112,8 +114,10 @@ const merge = (left, right) => {
 	result.concat(left, right);
 };
 
-bubbleSort(num);
-insertionSort(num);
+// bubbleSort(num);
+// insertionSort(num);
 console.log(quickSort([10, 2, 4, 3, 1, 6, 5, 8, 7, 9]));
 console.log(quickSort([10, 2]));
-console.log(mergeSort([10, 2, 4, 3, 1, 6, 5, 8, 7, 9]));
+console.log(quickSort([2]));
+
+// console.log(mergeSort([10, 2, 4, 3, 1, 6, 5, 8, 7, 9]));
