@@ -12,7 +12,7 @@ const binarySearch = (id, array) => {
 		if (element.id < id) {
 			min = index + 1;
 		} else if (element.id > id) {
-			min = index - 1;
+			max = index - 1;
 		} else {
 			return element;
 		}
@@ -21,7 +21,7 @@ const binarySearch = (id, array) => {
 };
 
 console.log(
-	binarySearch(23, [
+	binarySearch(80, [
 		{ id: 5, name: "Zubs" },
 		{ id: 1, name: "Kayode" },
 		{ id: 14, name: "Ayobami" },
@@ -32,22 +32,22 @@ console.log(
 );
 
 //Using Linear Search to look for a value
-const linearSearch = (id, array) => {
-	for (let i = 0; i < array.length; i++) {
-		if (id === array[i].id) {
-			return array[i];
-		}
-	}
-	return void 0;
-};
+// const linearSearch = (id, array) => {
+// 	for (let i = 0; i < array.length; i++) {
+// 		if (id === array[i].id) {
+// 			return array[i];
+// 		}
+// 	}
+// 	return void 0;
+// };
 
-console.log(
-	linearSearch(23, [
-		{ id: 1, name: "Kayode" },
-		{ id: 14, name: "Ayobami" },
-		{ id: 5, name: "Zubs" },
-		{ id: 23, name: "Uyo" },
-		{ id: 24, name: "Ekekiel" },
-		{ id: 80, name: "Ada" },
-	])
-);
+// console.log(
+// 	linearSearch(23, [
+// 		{ id: 1, name: "Kayode" },
+// 		{ id: 14, name: "Ayobami" },
+// 		{ id: 5, name: "Zubs" },
+// 		{ id: 23, name: "Uyo" },
+// 		{ id: 24, name: "Ekekiel" },
+// 		{ id: 80, name: "Ada" },
+// 	])
+// );
