@@ -1,19 +1,20 @@
 class LindedList {
 	constructor() {
-		this.head = null;
-		this.tail = null;
-		this.length = 0;
+		// Instantiate our variables
+		this.head = null; // The first value
+		this.tail = null; // The link to the next value
+		this.length = 0; // Size of list
 	}
 
 	push(value) {
 		const node = new Node(value);
-		this.length++;
+		this.length++; // Increment the length
 		if (!this.head) {
-			this.head = node;
+			this.head = node; // Set the head to the node if no head
 		} else {
-			this.tail.next = node;
+			this.tail.next = node; //Set the previous node link to the node added
 		}
-		this.tail = node;
+		this.tail = node; // assign the link to the node
 	}
 
 	pop() {
@@ -21,12 +22,13 @@ class LindedList {
 	}
 
 	_find(index) {
-		if (index >= this.length) return null;
-		let current = this.head;
-		for (let i = 0; i <= index - 1; i++) {
-			current = current.next;
+		if (index >= this.length) return null; //If index is greater than length of list, return null
+		let current = this.head; // Assign current to the first value
+		for (let i = 0; i < index; i++) {
+			// Loop through the list
+			current = current.next; // Set the current value to the next node link
 		}
-		return current;
+		return current; // Return the next node
 	}
 
 	get(index) {
@@ -37,11 +39,12 @@ class LindedList {
 
 	delete(index) {
 		if (index === 0) {
-			const head = this.head;
+			const head = this.head; // Assign the first value to the head
 			if (head) {
-				this.head = this.next;
+				this.head = this.next; // Assign the head to the next node link
 			} else {
 				this.head = null;
+				this.tail = null;
 			}
 			this.length--;
 			return head.value;
