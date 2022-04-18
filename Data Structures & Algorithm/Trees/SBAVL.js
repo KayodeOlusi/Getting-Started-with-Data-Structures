@@ -1,3 +1,7 @@
+/**
+ * Self Balancing AVL Tree
+ */
+
 class Tree {
 	constructor() {
 		this.root = null;
@@ -43,7 +47,7 @@ class Node {
 			}
 		}
 
-		if (this.left || this.right.height > this.left.height) {
+		if (!this.left || this.right.height > this.left.height) {
 			this.height = this.right.height + 1;
 		}
 
