@@ -8,7 +8,7 @@ class ArrayList {
 
 	push(value) {
 		this.array[this.length] = value; // Set the value in the index of the array to the value needed
-		this.length++; // Increment the length to accomodate a new value
+		this.length++; // Increment the length to accommodate a new value
 	}
 
 	pop() {
