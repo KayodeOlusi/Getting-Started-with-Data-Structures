@@ -129,6 +129,7 @@ function findLongestNumber(array) {
 		const currentLength = array[i].toString().length;
 		longest = currentLength > longest ? currentLength : longest;
 	}
+
 	return longest;
 }
 
